@@ -1,0 +1,7 @@
+ARG_ENABLE('helloword', 'helloword support', 'no');
+
+if (PHP_HELLOWORD != 'no') {
+	AC_DEFINE('HAVE_HELLOWORD', 1, 'helloword support enabled');
+
+	EXTENSION('helloword', 'helloword.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
