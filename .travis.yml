@@ -1,0 +1,27 @@
+language: php
+os: linux
+compiler:
+  - gcc
+  - clang
+php:
+  - '7.3'
+  - '5.6'
+  - '5.4'
+notifications:
+  email:
+    - 823688826@qq.com
+addons:
+  apt:
+    packages:
+      - libgtk-3-dev
+      - build-essential
+      - pkg-config
+      - gnome-devel
+      - gnome-devel-docs
+install:
+  - "phpize"
+  - "./configure"
+  - "make -j4"
+  - "make install"
+
+
